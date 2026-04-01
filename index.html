@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="report">
+  <div class="header" id="storeName">Tên cửa hàng</div>
+
+  <div class="card">
+    <b>📅 Hôm nay</b>
+    <div class="row">
+      <div>Tổng thu</div>
+      <div class="green" id="totalIncome">0</div>
+    </div>
+    <div class="row">
+      <div>Tổng chi</div>
+      <div class="red" id="totalExpense">0</div>
+    </div>
+  </div>
+</div>
+
+<div id="transaction" class="hidden">
+  <div class="header">Giao dịch</div>
+
+  <div class="card">
+    <button onclick="addIncome()">+ Khoản thu</button>
+    <button onclick="addExpense()">+ Khoản chi</button>
+  </div>
+
+  <div class="card" id="list"></div>
+</div>
+
+<div id="partner" class="hidden">
+  <div class="header">Đối tác</div>
+
+  <div class="card">
+    <input id="partnerName" placeholder="Tên đối tác">
+    <button onclick="addPartner()">➕ Thêm</button>
+  </div>
+
+  <div class="card" id="partnerList"></div>
+</div>
+
+<div id="store" class="hidden">
+  <div class="header">Cửa hàng</div>
+
+  <div class="card">
+    <input id="storeInput" placeholder="Tên cửa hàng">
+    <button onclick="saveStore()">Lưu</button>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <div onclick="showTab('report')">Báo cáo</div>
+  <div onclick="showTab('transaction')">Giao dịch</div>
+  <div onclick="showTab('partner')">Đối tác</div>
+  <div onclick="showTab('store')">Cửa hàng</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
